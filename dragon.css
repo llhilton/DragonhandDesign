@@ -1,0 +1,135 @@
+body { background-color: #eeeeee; /*Alternately, use f7fcb9*/
+       font-family: Verdana, Arial, sans-serif;
+}
+
+#wrapper { width: 728px;
+	margin: 0 auto;
+	-webkit-box-shadow: 1px 5px 5px 5px #005445;
+	-moz-box-shadow: 1px 5px 5px 5px #005445;
+	box-shadow: 1px 5px 5px 5px #005445;
+	background-color: #eeeeee;
+	
+}
+
+#header{ font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: xx-large;
+	text-align: center;
+	letter-spacing: 5px;
+	background-color: #b7db9e; /*alternately, use f7fcb9*/
+	padding-bottom: 5px;
+}
+
+#columns {
+	overflow: hidden;
+	}
+
+#nav { font-size: .90em;
+	background-color: #f7fcb9;
+	width: 140px;
+	/*border: solid 1px #006837;*/
+	float: left;
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+
+#nav ul { list-style-type: none; 
+	margin: 3px;
+	padding: 0;
+}
+
+#nav li { margin: 0;
+	border-bottom: solid 1px #005445;
+}
+
+#nav a { display: block;
+	padding: 3px;
+	}
+
+#nav a:link{ color: #004529; 
+	text-decoration: none;
+	}
+#nav a:visited { color: #238443;
+	text-decoration: none;
+	}
+#nav a:hover { color: #41ab5d; 
+	text-decoration: underline;
+	
+}
+
+#content { padding: 20px;
+	margin-left: 140px;
+	background-color: #eeeeee;
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+	font-size: medium;
+}	  
+
+#content a:link{ color: #238443; 
+	text-decoration: none;
+	}
+#content a:visited { color: #238443;
+	text-decoration: none;
+	}
+#content a:hover { color: #41ab5d; 
+	text-decoration: underline;
+	
+}
+
+#events table { 	border-collapse: collapse;
+}
+
+#events table, th, td { border: 1px solid #005445;
+	border-collapse: collapse;
+}
+
+#events th { font-weight: bold;
+	vertical-align: top;
+	text-align: center;
+	 background-color: #ffffe5;
+}
+
+#events td { text-align: left;
+	min-width: 150px;
+	vertical-align:top;
+	padding: 5px;
+	font-size: 0.95em;
+}
+
+.altrow { background-color: #ffffe5;
+}
+
+#footer { background-color: #b7db9e;
+          font-size: .80em;
+          text-align: right;
+		  padding: 1px 5px 1px 5px;
+		 clear: left;
+}
+
+h2{ text-align: center;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+/*CSS for sample tabs, courtesy of Matt Doyle from http://www.elated.com/articles/javascript-tabs/ */
+body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
+ul#tabs li { display: inline; }
+ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
+ul#tabs li a:hover { background-color: #f1f0ee; }
+ul#tabs li a.selected { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
+div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; 	min-height: 00px;}
+div.tabContent.hide { display: none; }
+
+/*CSS for the form table*/
+#formtable table { 	border-collapse: collapse; }
+#formtable table, td,th {
+	border: none;
+}
+#formtable td {padding: 3px;
+}
+
+/*#ffffe5    #f7fcb9    #d9f0a3    
+#addd8e    #78c679    #41ab5d    
+#238443    #006837    #004529    
+
+#d0e9c1 #abd09a #f2fcda #b7db9e #005445
+*/

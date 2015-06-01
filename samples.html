@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Dragonhand Design - Samples</title>
+	<link href="dragon.css" rel="stylesheet" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	 <meta name="description" content="Dragonhand Design makes handcrafted jewelry from precious and semi-precious stones and freshwater pearls." />
+ <meta name="keywords" content="jewelry,necklace,earrings,handmade jewelry,handmade,handcrafted,pearls,gems,dragonhand,design,dragonhand design" />
+ 
+	<!--Use of Javascript for the tabs is thanks to Matt Doyle, as shared at http://www.elated.com/articles/javascript-tabs/ -->
+	
+	<script type="text/javascript">
+    //<![CDATA[
+
+    var tabLinks = new Array();
+    var contentDivs = new Array();
+
+    function init() {
+
+      // Grab the tab links and content divs from the page
+      var tabListItems = document.getElementById('tabs').childNodes;
+      for ( var i = 0; i < tabListItems.length; i++ ) {
+        if ( tabListItems[i].nodeName == "LI" ) {
+          var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+          var id = getHash( tabLink.getAttribute('href') );
+          tabLinks[id] = tabLink;
+          contentDivs[id] = document.getElementById( id );
+        }
+      }
+
+      // Assign onclick events to the tab links, and
+      // highlight the first tab
+      var i = 0;
+
+      for ( var id in tabLinks ) {
+        tabLinks[id].onclick = showTab;
+        tabLinks[id].onfocus = function() { this.blur() };
+        if ( i == 0 ) tabLinks[id].className = 'selected';
+        i++;
+      }
+
+      // Hide all content divs except the first
+      var i = 0;
+
+      for ( var id in contentDivs ) {
+        if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+        i++;
+      }
+    }
+
+    function showTab() {
+      var selectedId = getHash( this.getAttribute('href') );
+
+      // Highlight the selected tab, and dim all others.
+      // Also show the selected content div, and hide all others.
+      for ( var id in contentDivs ) {
+        if ( id == selectedId ) {
+          tabLinks[id].className = 'selected';
+          contentDivs[id].className = 'tabContent';
+        } else {
+          tabLinks[id].className = '';
+          contentDivs[id].className = 'tabContent hide';
+        }
+      }
+
+      // Stop the browser following the link
+      return false;
+    }
+
+    function getFirstChildWithTagName( element, tagName ) {
+      for ( var i = 0; i < element.childNodes.length; i++ ) {
+        if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+      }
+    }
+
+    function getHash( url ) {
+      var hashPos = url.lastIndexOf ( '#' );
+      return url.substring( hashPos + 1 );
+    }
+
+    //]]>
+    </script>
+ 
+</head>
+
+<body onload="init()"> <!--Initializes the tabs-->
+	<div id="wrapper">
+		<div id="header">
+			<img src="images/dragonbanner.jpg" width="728" height="150" alt="Dragonhand Logo" /><br />
+			Dragonhand Design
+		</div>
+		<div id="columns">
+			<div id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="samples.html">Samples</a></li>
+					<li><a href="custom.html">Custom Orders</a></li>
+					<li><a href="suppliers.html">Suppliers</a></li>
+					<li><a href="guarantee.html">Guarantee</a></li>
+					<li><a href="testimonials.html">Testimonials</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+
+			
+			
+			<div id="content">
+			
+			 <ul id="tabs">
+			  <li><a href="#necklaces">Necklaces</a></li>
+			  <li><a href="#earrings">Earrings</a></li>
+			  <li><a href="#sets">Sets</a></li>
+			</ul>
+
+			<div class="tabContent" id="necklaces">
+				<p><img src="images/blueneck.jpg" title="Blue necklace" alt="Blue necklace" /></p>
+				<p><img src="images/colorneck.jpg" title="Multicolored Neclace" alt="Multicolored necklace" /></p>
+				<p><img src="images/dangleneck.jpg" title="Dangle Neclace" alt="Dangle necklace" /></p>
+				<p><img src="images/greenneck.jpg" title="Green Neclace" alt="Green necklace" /></p>
+			</div>
+
+			<div class="tabContent" id="earrings">
+			  <p><img src="images/knots.jpg" title="Knot Earrings" alt="Knot Earrings" /></p>
+				<p><img src="images/drops.jpg" title="Drop Earrings" alt="Drop Earrings" /></p>
+				<p><img src="images/triplets.jpg" title="Triple Earrings" alt="Triple Earrings" /></p>
+				<p><img src="images/square.jpg" title="Square Earrings" alt="Square Earrings"  /></p>
+			</div>
+
+			<div class="tabContent" id="sets">
+			  <p><img src="images/set1.jpg" title="Blue Square Set" alt="Blue Square Set" /></p>
+				<p><img src="images/set2.jpg" title="Black and Clear Set" alt="Black and Clear Set" /></p>
+				<p><img src="images/set3.jpg" title="Black Set" alt="Black Set" /></p>
+			</div>
+
+			
+				
+			</div>
+		</div>
+		<div id="footer">
+			<p><a href="http://jigsaw.w3.org/css-validator/check/referer"> <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a> 
+			&copy; 2014 by Lisa Hilton</p>
+		</div>
+	</div>
+</body>
+
+</html>
